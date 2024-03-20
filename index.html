@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Decifre Detetives</title>
+  <link rel="shortcut icon" href="./assets/lupa.png" type="image/x-icon" />
+  <link rel="stylesheet" href="style.css"
+
+  <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+  <header class="cabecalho-pagina">
+    <div class="conteudo-cabecalho">
+      <img src="./assets/aluraicon.png" alt="ícone alura" class="icone-alura">
+      <h1 class="titulo-cabecalho"></h1>
+      <div class="icone-instrucoes" onclick="abrirModalDeInstrucoes()">
+        <i class="fa-regular fa-circle-question"></i>
+        <span class="dica">Instruções</span>
+    </div>
+    </div>
+  </header>
+
+  <div id="instructionsModal" class="modal">
+    <div class="conteudo-modal">
+        <span class="fechar" onclick="fecharModalDeInstrucoes()">&times;</span>
+        <ol>
+          <li class="texto-instrucao" >Digite sua mensagem na <strong>caixa abaixo.</strong></li>
+          <li class="texto-instrucao" >Clique em <strong>"Criptografar"</strong> para transformar seu texto em uma mensagem secreta. </li>
+          <li class="texto-instrucao" >Ou clique em <strong>"Descriptografar"</strong> para ver o que está escrito em uma mensagem secreta.</li>
+      </ol>
+    </div>
+  </div>
+
+  <main class="container-principal">
+    <div class="secao-texto-original">
+        <textarea id="texto-original" class="area-texto-original" placeholder="Digite seu texto..."></textarea>
+        <label class="rotulo-texto-original"><i class="fas fa-exclamation-circle"></i>Apenas letras minúsculas e sem acento!</label>
+
+        <div class="botoes-container">
+          <button class="botao-criptografar" onclick="criptografar()">Criptografar</button>
+          <button class="botao-descriptografar" onclick="descriptografar()">Descriptografar</button>
+        </div>
+    </div>
+      
+      <div class="container-resultado">
+        <textarea id="texto-processado" class="area-texto-processado" disabled></textarea>
+        <img src="./assets/jovemdetetive.png" alt="detetive" class="imagem-resultado">
+        <p id="texto-processado-1" class="mensagem-resultado__1">Nenhuma mensagem encontrada.</p>
+        <p id="texto-processado-2" class="mensagem-resultado__2">Digite um texto que você deseja criptografar ou descriptografar.</p>
+      </div>
+  </main>
+
+  <footer class="secao-rodape">
+    <div class="conteudo-rodape">
+      <p class="direitos-autorais">&copy; Desenvolvido por Victoria Miranda | Alura Challenge - Curso Oracle Next Education | Março 2024</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
